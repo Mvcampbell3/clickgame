@@ -4,7 +4,7 @@ class Header extends Component {
   render() {
     return (
       <header style={style}>
-        <h1>Clicky Game</h1>
+        <h1>UFC 3 Click Game</h1>
       </header>
     )
   }
