@@ -6,7 +6,7 @@ class PictureArea extends Component {
   
   render() {
     return this.props.pictures.map(picture => 
-      <Picture picture={picture} key={picture.id} markClicked={this.props.markClicked}/>
+      <Picture picture={picture} key={picture.id} firstStop={this.props.firstStop}/>
     )
   }
 }

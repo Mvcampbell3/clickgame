@@ -3,10 +3,33 @@ body, html, h1, h2, h3, h4, h5, h6, p, ul, li {
   padding: 0;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 a{
   text-decoration: "none"
 }
 
 li{
   list-style: "none";
+}
+
+.badClass{
+  animation-name: "shimmy";
+  animation-duration: 300ms;
+  animation-fill-mode: forwards
+}
+
+@keyframes shimmy {
+  0% {transform: translate(10px, 10px)}
+  50% {transform: translate(-20px, -20px)}
+  100% {transform: translate(0px, 0px)}
+}
+
+.picGrid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  grid-gap: 15px;
 }
