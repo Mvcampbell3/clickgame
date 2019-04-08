@@ -2,11 +2,13 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  background-color:#222;
+  background-color:#333;
   color: white;
   font-family: 'Rakkas', cursive;
-  margin-bottom: 1em;
-  padding: 5px 20px;
+  margin-bottom: .25em;
+  padding: 5px 50px;
+  text-shadow: 3px 3px black
+
 }
 
 .scores{
@@ -20,4 +22,38 @@
 .board{
   width: 310px;
   text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .scoreboard{
+    flex-direction: column;
+  }
+
+  .board{
+    margin: auto;
+  }
+
+  
+}
+
+@media (max-width:450px) {
+  .scoreboard{
+    padding: 10px 0px;
+  }
+
+  .scoreboard h2{
+    font-size: 24px;
+  }
+
+  .board{
+    width: 100%;
+  }
+
+  .scores{
+    flex-direction: column;
+  }
+
+  .scores h2:nth-child(1){
+    margin-right:  0;
+  }
 }
