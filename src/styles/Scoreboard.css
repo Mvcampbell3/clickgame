@@ -1,10 +1,23 @@
 .scoreboard{
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color:#222;
   color: white;
   font-family: 'Rakkas', cursive;
   margin-bottom: 1em;
-  padding: 5px 0;
+  padding: 5px 20px;
+}
+
+.scores{
+  display: flex;
+}
+
+.scores h2:nth-child(1){
+  margin-right:  20px;
+}
+
+.board{
+  width: 310px;
+  text-align: center;
 }
