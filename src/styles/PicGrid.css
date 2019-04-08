@@ -1,0 +1,40 @@
+.picGrid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 15px;
+  width: 95%;
+  margin: auto;
+}
+
+.badClass{
+  animation-name: "shimmy";
+  animation-duration: 300ms;
+  animation-fill-mode: forwards
+}
+
+@keyframes shimmy {
+  0% {transform: translate(10px, 10px)}
+  50% {transform: translate(-20px, -20px)}
+  100% {transform: translate(0px, 0px)}
+}
+
+/* For the hearts */
+.red{
+  color: red;
+  margin-right: 4px;
+}
+
+@media (max-width: 900px) {
+  .picGrid{
+    grid-template-columns: auto auto auto; 
+  }
+}
+
+@media (max-width: 500px) {
+  .picGrid{
+    grid-template-columns: auto auto; 
+  }
+}

@@ -1,0 +1,10 @@
+.scoreboard{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color:#222;
+  color: white;
+  font-family: 'Rakkas', cursive;
+  margin-bottom: 1em;
+  padding: 5px 0;
+}
