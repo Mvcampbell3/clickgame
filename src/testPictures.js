@@ -4,7 +4,7 @@ const photos = [
     name: "Alea The Huntress",
     url: "./images/Aela_the_Huntress.jpg",
     clicked: false,
-    clickedOnce: false,
+    win: false,
   },
 
   {
@@ -12,7 +12,7 @@ const photos = [
     name: "Alduin",
     url: "./images/Alduin.jpg",
     clicked: false,
-    clickedOnce: false,
+    win: false,
   },
 
   {
@@ -20,7 +20,7 @@ const photos = [
     name: "Ancano",
     url: "./images/Ancano.jpg",
     clicked: false,
-    clickedOnce: false,
+    win: false,
   }
 
 ]

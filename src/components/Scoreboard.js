@@ -24,11 +24,11 @@ class ScoreBoard extends Component {
     return (
       <div className="scoreboard" style={style}>
         <div className="scores board">
-          <h2>Score: {this.props.score}</h2>
-          <h2>High Score: {this.props.highscore}</h2>
+          <h3>Score: {this.props.score}</h3>
+          <h3>High Score: {this.props.highscore}</h3>
         </div>
-        <h2 className="board" style={this.getColor()}>{this.order()}</h2>
-        <h2 className="board">Left: {this.props.left}</h2>
+        <h3 className="board" style={this.getColor()}>{this.order()}</h3>
+        <h3 className="board">Left: {this.props.left}</h3>
       </div>
     )
   }

@@ -22,3 +22,16 @@
   width: 100%;
   height: auto;
 }
+
+.win{
+  animation-name: "dance";
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+}
+
+@keyframes dance{
+  0% {transform: rotateZ(0deg) scale(1)}
+  50% {transform: rotateZ(360deg) scale(.5)}
+  100% {transform: rotateZ(720deg) scale(1)}
+}

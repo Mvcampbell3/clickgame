@@ -4,6 +4,7 @@ const photos = [
     name: "Alea The Huntress",
     url: "./images/Aela_the_Huntress.jpg",
     clicked: false,
+    win:false
   },
 
   {
@@ -11,6 +12,7 @@ const photos = [
     name: "Alduin",
     url: "./images/Alduin.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -18,6 +20,7 @@ const photos = [
     name: "Astrid",
     url: "./images/Astrid.jpg",
     clicked: false,
+    win:false
   },
 
   {
@@ -25,6 +28,7 @@ const photos = [
     name: "Cicero",
     url: "./images/Cicero.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -32,6 +36,7 @@ const photos = [
     name: "General Tullius",
     url: "./images/General_Tullius.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -39,6 +44,7 @@ const photos = [
     name: "Karliah",
     url: "./images/Karliah.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -46,6 +52,7 @@ const photos = [
     name: "Mercer Frey",
     url: "./images/Mercer_Frey.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -53,6 +60,7 @@ const photos = [
     name: "Mjoll the Lioness",
     url: "./images/Mjoll_the_Lioness.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -60,6 +68,7 @@ const photos = [
     name: "Paarthurnax",
     url: "./images/Paarthurnax.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -67,6 +76,7 @@ const photos = [
     name: "Serana",
     url: "./images/Serana.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -74,6 +84,7 @@ const photos = [
     name: "Sheogorath",
     url: "./images/Sheogorath.jpg",
     clicked: false,
+    win:false
   },
   
   {
@@ -81,6 +92,7 @@ const photos = [
     name: "Ulfric Stormcloak",
     url: "./images/Ulfric_Stormcloak.jpg",
     clicked: false,
+    win:false
   }
   
 ]

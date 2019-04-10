@@ -13,8 +13,9 @@ class App extends Component {
     wrong: false,
     left: pictures.length,
     highscore: 0,
-    last:"",
-    wasWrong: "empty"
+    last: "",
+    wasWrong: "empty",
+    win: false
   }
 
   firstStop = (id) => {
@@ -29,33 +30,48 @@ class App extends Component {
     this.setState({
       photos: this.state.photos.map(picture => {
         if (picture.id === id) {
-          this.setState({last: picture.name})
+          this.setState({ last: picture.name })
           if (picture.clicked) {
             console.log("bad")
-            this.setState({ wrong: true , wasWrong: true})
+            this.setState({
+              wrong: true,
+              wasWrong: true
+            })
             // game-over bad area
             if (this.state.score > this.state.highscore) {
               console.log("new high score");
               this.setState({
                 highscore: this.state.score,
-
               })
             }
-            this.setState({
-              score: 0,
-              left: 12,
-              photos: this.state.photos.map(picture => {
-                picture.clicked = false;
-                return picture
-              })
-            });
+            this.resetGame();
 
           } else {
             console.log("good");
-            this.setState({ score: this.state.score + 1, wrong: false, wasWrong: false, left: this.state.left - 1 })
+            this.setState({
+              score: this.state.score + 1,
+              wrong: false,
+              wasWrong: false,
+              left: this.state.left - 1
+            });
+
             picture.clicked = !picture.clicked;
+
             if (this.state.left === 0) {
-              console.log("Game Over")
+              console.log("Game Over");
+              this.setState({
+                win: true,
+                highscore: this.state.score,
+                photos: this.state.photos.map(winpic => {
+                  winpic.win = true;
+                  return winpic
+                })
+              })
+              setTimeout(() => {
+                console.log("ran timeout function")
+                this.resetGame();
+              }, 3000)
+
             }
           }
         }
@@ -63,6 +79,19 @@ class App extends Component {
       })
     })
     this.shuffle();
+  }
+
+  resetGame = () => {
+    this.setState({
+      score: 0,
+      win: false,
+      left: pictures.length,
+      photos: this.state.photos.map(picture => {
+        picture.clicked = false;
+        picture.win = false;
+        return picture
+      })
+    });
   }
 
   shuffle = () => {
@@ -101,6 +130,7 @@ class App extends Component {
           pictures={this.state.photos}
           wrong={this.state.wrong}
           firstStop={this.firstStop}
+          win={this.state.win}
         />
       </div>
     );
